@@ -1,0 +1,26 @@
+name = "lung-cancer-screening-app"
+compatibility_date = "2023-12-01"
+
+[build]
+command = "npm run build"
+
+[site]
+bucket = "./public"
+
+[env.production]
+name = "lung-cancer-screening-app-prod"
+
+[env.staging]
+name = "lung-cancer-screening-app-staging"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "lung_cancer_screening_db"
+database_id = "placeholder-id"
+
+[[r2_buckets]]
+binding = "STORAGE"
+bucket_name = "lung-cancer-screening-images"
+
+[vars]
+ENVIRONMENT = "development"

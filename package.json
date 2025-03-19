@@ -1,0 +1,43 @@
+{
+    "name": "lung-cancer-screening-app",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "wrangler:dev": "wrangler dev",
+        "db:migrate": "wrangler d1 migrations apply DB --local",
+        "db:reset": "rm -rf .wrangler/state/v3 && wrangler d1 execute DB --local --file=migrations/0001_initial.sql"
+    },
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "cornerstone-core": "^2.6.1",
+        "cornerstone-tools": "^6.0.10",
+        "cornerstone-wado-image-loader": "^4.13.2",
+        "dicom-parser": "^1.8.21",
+        "lucide-react": "^0.294.0",
+        "next": "^14.0.0",
+        "next-auth": "^4.24.5",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "recharts": "^2.10.3",
+        "uuid": "^9.0.1",
+        "zod": "^3.22.4"
+    },
+    "devDependencies": {
+        "@types/bcryptjs": "^2.4.6",
+        "@types/node": "^20.10.4",
+        "@types/react": "^18.2.42",
+        "@types/react-dom": "^18.2.17",
+        "@types/uuid": "^9.0.7",
+        "autoprefixer": "^10.4.21",
+        "eslint": "^8.55.0",
+        "eslint-config-next": "^14.0.3",
+        "postcss": "^8.5.3",
+        "tailwindcss": "^3.4.17",
+        "typescript": "^5.3.3",
+        "wrangler": "^3.22.1"
+    }
+}
